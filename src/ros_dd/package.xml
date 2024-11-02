@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+<name>ros_dd</name>
+<version>0.0.0</version>
+<description>로봇 URDF를 RViz에서 시각화하고 휠 퍼블리셔를 통해 바퀴를 회전시키는 패키지입니다.</description>
+<maintainer email="jhchoman@example.com">jhchoman</maintainer>
+<license>MIT</license>
+
+<!-- wheel publisher를 추가했을 때 필요한 부분 -->
+<build_depend>rclpy</build_depend>
+<exec_depend>rclpy</exec_depend>
+<exec_depend>sensor_msgs</exec_depend>
+
+<!-- 런치 파일 및 URDF 시각화를 위한 의존성 -->
+<exec_depend>launch</exec_depend>
+<exec_depend>launch_ros</exec_depend>
+<exec_depend>ament_index_python</exec_depend>
+<exec_depend>robot_state_publisher</exec_depend>
+<exec_depend>rviz2</exec_depend>
+
+<!-- 코드 품질 검사를 위한 테스트 의존성 -->
+<test_depend>ament_copyright</test_depend>
+<test_depend>ament_flake8</test_depend>
+<test_depend>ament_pep257</test_depend>
+<test_depend>python3-pytest</test_depend>
+
+<export>
+<build_type>ament_python</build_type>
+</export>
+</package>
